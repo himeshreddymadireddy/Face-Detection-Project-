@@ -1,2 +1,2 @@
-# Face-Detection-Project-
+# Face-Detection-Project
 Face Detection Project 
