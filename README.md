@@ -21,7 +21,7 @@ A Flask-based web application for detecting and recognizing student faces in upl
 ```bash
 pip install flask numpy opencv-python face-recognition dlib
 ```
-- **Note**: On some systems, dlib may require additional steps. See dlib installation guide.
+- **Note**: On some systems, `dlib` may require additional steps. See dlib installation guide.
 
 3. **Folder Structure**:
 Ensure the following folders exist (created automatically on first run):
@@ -34,14 +34,14 @@ Ensure the following folders exist (created automatically on first run):
 ## Configuration
 1. **Add Student Faces**:
 
-- FOlDER CREATION:Create a folder for each student in student_faces/ (e.g., student_faces/student_01).
+- FOlDER CREATION:Create a folder for each student in `student_faces/` (e.g., `student_faces/student_01`).
 - Place 1+ clear face images (JPG/PNG) in each student's folder. The app will auto-generate encodings on startup.
 
 2. **Pre-Trained Models**:
 
 * The app uses two pre-trained models:
-  * shape_predictor_58_free_landmarks.dat: For face landmark detection.
-  * dis_lace_recognition_resnet_model_v1.dat: For face encoding.
+  * `shape_predictor_58_free_landmarks.dat`: For face landmark detection.
+  * `dis_lace_recognition_resnet_model_v1.dat`: For face encoding.
 * Ensure these files are present in the root directory.
 
 ## Usage
@@ -50,7 +50,7 @@ Ensure the following folders exist (created automatically on first run):
 python app.py
 ```
 2. Access the web interface:
-  Open http://localhost:5000 in a browser.
+  Open `http://localhost:5000` in a browser.
 3. Upload an image:
 
 * Use the web form to upload an image containing faces.
@@ -63,9 +63,9 @@ python app.py
   * Lists of recognized and unrecognized student IDs.
 
 ## API Endpoints
-* GET /: Homepage with upload form.
-* POST /upload: Handle image upload and processing.
-* GET /outputs/<filename>: Retrieve processed images.
+* `GET /`: Homepage with upload form.
+* `POST /upload`: Handle image upload and processing.
+* `GET /outputs/<filename>`: Retrieve processed images.
 
 ## Dependencies
 * Flask (web framework)
@@ -79,10 +79,10 @@ python app.py
 * numpy (array handling)
 
 ## Acknowledgments
-* Face recognition powered by face-recognition library.
-* Pre-trained models from dlib.
+* Face recognition powered by [face-recognition](https://github.com/ageitgey/face_recognition) library.
+* Pre-trained models from [dlib](https://dlib.net/).
 
 ## Notes
-- **Tolerance Setting**: Matches are determined with a tolerance of 0.6 (lower = stricter). Adjust in detect_and_match_faces() if needed.
+- **Tolerance Setting**: Matches are determined with a tolerance of `0.6` (lower = stricter). Adjust in `detect_and_match_faces()` if needed.
 
 - **Image Quality**: For best results, use high-quality student images with clear frontal faces.
