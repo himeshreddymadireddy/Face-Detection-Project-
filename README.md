@@ -19,7 +19,6 @@ A Flask-based web application for detecting and recognizing student faces in upl
 2. **Install dependencies**:
 
 ```bash
-Copy
 pip install flask numpy opencv-python face-recognition dlib
 ```
 - **Note**: On some systems, dlib may require additional steps. See dlib installation guide.
